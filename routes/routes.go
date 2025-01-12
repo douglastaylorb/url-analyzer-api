@@ -19,6 +19,8 @@ func HandleRequest() {
 		AllowCredentials: true,
 	}))
 
+	router.GET("/api/download-pdf", controllers.DownloadPDF)
 	router.POST("/api/analyze", controllers.AnalyzeURL)
+
 	router.Run(":8080")
 }
