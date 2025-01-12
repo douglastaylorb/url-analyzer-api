@@ -25,26 +25,28 @@ Este é o componente de backend do projeto URL Analyzer. Ele é responsável por
 ## Estrutura do Projeto
 
 Segue a estrutura de diretórios do projeto:
-URL-ANALYZER-API
-├── assets/                       # Fontes para PDF
-│   ├── Roboto-Bold.ttf           # Fonte Roboto (Negrito)
-│   └── Roboto-Regular.ttf        # Fonte Roboto (Regular)
-├── controllers/                  # Diretório dedicado aos controladores
-│   └── urlController.go          # Lógica relacionada a rotas de URLs
-├── database/                     # Configuração de database e conexão
-│   ├── db.go                     # Inicialização e manipulação CRUD
-│   └── models/
-│       └── url.go                # Estrutura do modelo de URL (abstração dos dados)
-├── routes/                       # Declaração das rotas HTTP
-│   └── routes.go                 # Agrupamento de rotas e middlewares
-├── services/                     # Contém serviços gerais reutilizáveis
-│   └── urlService.go             # Lógica principal da análise de URLs e PDFs
-├── .env                          # Variáveis de ambiente
-├── docker-compose.yml            # Definições Docker para rodar a aplicação
-├── go.mod                        # Lista de dependências do projeto
-├── go.sum                        # Checksum das dependências
-├── main.go                       # Ponto de entrada principal
-└── README.md                     # Documentação
+
+| Diretório/Arquivo            | Descrição                                                   |
+|------------------------------|-----------------------------------------------------------|
+| `assets/`                    | Fontes utilizadas para a geração de PDFs                  |
+| ├── `Roboto-Bold.ttf`        | Fonte Roboto (Negrito)                                     |
+| └── `Roboto-Regular.ttf`     | Fonte Roboto (Regular)                                     |
+| `controllers/`               | Controladores que manipulam as rotas                      |
+| └── `urlController.go`       | Lógica relacionada às rotas de URLs                       |
+| `database/`                  | Configuração do banco de dados e operações CRUD           |
+| ├── `db.go`                  | Inicialização e manipulação do banco de dados (SQLite)    |
+| └── `models/`                | Diretório que contém estrutura dos modelos                |
+|     └── `url.go`             | Estrutura do modelo de URL (abstração dos dados)          |
+| `routes/`                    | Declaração e gerenciamento das rotas HTTP                 |
+| └── `routes.go`              | Agrupamento de rotas e middlewares                        |
+| `services/`                  | Lógica de negócio e serviços reutilizáveis               |
+| └── `urlService.go`          | Implementação principal para análise de URLs e PDFs       |
+| `.env`                       | Arquivo de variáveis de ambiente                          |
+| `docker-compose.yml`         | Configuração do Docker para rodar a aplicação             |
+| `go.mod`                     | Arquivo de dependências do Go                             |
+| `go.sum`                     | Checksum das dependências do projeto                      |
+| `main.go`                    | Ponto de entrada principal para iniciar o servidor        |
+| `README.md`                  | Documentação do projeto                                   |
 
 ---
 
@@ -67,33 +69,37 @@ URL-ANALYZER-API
 
 2. **Exemplo de Requisição:**
 
-  // json
-  {
-    "url": "https://example.com"
-  }
+   ```
+     // json
+     {
+       "url": "https://example.com"
+     }
+   ```
 
+   Exemplo de Resposta:
 
-Exemplo de Resposta:
-
-json
-{
-  "ip": "127.0.0.1",
-  "serverInfo": "nginx",
-  "performanceMetrics": "120ms",
-  "allowedMethods": "GET, POST",
-  "hrefs": [
-    "https://example.com/page1",
-    "https://example.com/page2"
-  ],
-  "contentType": {
-    "text/html": "90%",
-    "image/png": "10%"
-  }
-}
-GET /api/download-pdf
-Gera e retorna um relatório no formato PDF para uma URL.
-
-Parâmetros da URL:
-
-url: A URL a ser analisada (Ex: https://example.com)
-Resposta: Um arquivo PDF gerado para download.
+   ```
+   // json
+   {
+     "ip": "127.0.0.1",
+     "serverInfo": "nginx",
+     "performanceMetrics": "120ms",
+     "allowedMethods": "GET, POST",
+     "hrefs": [
+       "https://example.com/page1",
+       "https://example.com/page2"
+     ],
+     "contentType": {
+       "text/html": "90%",
+       "image/png": "10%"
+     }
+   }
+   ```
+   
+   GET /api/download-pdf
+   Gera e retorna um relatório no formato PDF para uma URL.
+   
+   Parâmetros da URL:
+   
+   url: A URL a ser analisada (Ex: https://example.com)
+   Resposta: Um arquivo PDF gerado para download.
