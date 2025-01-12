@@ -1,0 +1,38 @@
+# Diretórios e arquivos do Go
+bin/
+pkg/
+**/*.exe
+**/*.exe~
+**/*.dll
+**/*.so
+**/*.dylib
+/vendor/
+potgres-data/
+
+# Binários de compilação
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+
+# Arquivos editoriais
+*.swp
+*~
+
+# Arquivo de configuração de IDEs
+.idea/
+.vscode/
+*.iml
+
+# Arquivos temporários e logs
+*.log
+*.out
+*.tmp
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de ambiente
+.env
