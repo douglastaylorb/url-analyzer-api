@@ -19,8 +19,12 @@ func HandleRequest() {
 		AllowCredentials: true,
 	}))
 
+	// Rotas URL Analyzer
 	router.GET("/api/download-pdf", controllers.DownloadPDF)
 	router.POST("/api/analyze", controllers.AnalyzeURL)
+
+	// Rotas CPF Generator
+	router.GET("/api/generate-cpf", controllers.GenerateCPFHandler)
 
 	router.Run(":8080")
 }
