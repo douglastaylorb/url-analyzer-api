@@ -12,12 +12,15 @@ func HandleRequest() {
 
 	//configuração de cors
 	router.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"*"},
-		AllowMethods:     []string{"GET", "POST"},
-		AllowHeaders:     []string{"Origin", "Content-Type"},
-		ExposeHeaders:    []string{"Content-Length"},
-		AllowCredentials: true,
-	}))
+    AllowOrigins: []string{
+        "http://localhost:5173",
+        "https://seu-dominio-na-vercel.com",
+    },
+    AllowMethods:     []string{"GET", "POST"},
+    AllowHeaders:     []string{"Origin", "Content-Type"},
+    ExposeHeaders:    []string{"Content-Length"},
+    AllowCredentials: true,
+}))
 
 	// Rotas URL Analyzer
 	router.GET("/api/download-pdf", controllers.DownloadPDF)
