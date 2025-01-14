@@ -14,7 +14,7 @@ func HandleRequest() {
 	router.Use(cors.New(cors.Config{
 		AllowOrigins: []string{
 			"http://localhost:5173",
-			"https://url-analyzer-front.vercel.app",
+			"https://net-kit.vercel.app",
 		},
 		AllowMethods:     []string{"GET", "POST"},
 		AllowHeaders:     []string{"Origin", "Content-Type"},
