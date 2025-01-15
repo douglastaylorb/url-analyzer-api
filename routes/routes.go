@@ -29,5 +29,8 @@ func HandleRequest() {
 	// Rotas CPF Generator
 	router.GET("/api/generate-cpf", controllers.GenerateCPFHandler)
 
+	// Rotas MetaTag Validator
+	router.POST("/api/validate-meta-tags", controllers.ValidateMetaTagHandler)
+
 	router.Run(":8080")
 }
