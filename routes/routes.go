@@ -32,5 +32,8 @@ func HandleRequest() {
 	// Rotas MetaTag Validator
 	router.POST("/api/validate-meta-tags", controllers.ValidateMetaTagHandler)
 
+	// Rotas Port Finder
+	router.POST("/api/scan-ports", controllers.ScanPortsController)
+
 	router.Run(":8080")
 }
