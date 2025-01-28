@@ -32,5 +32,8 @@ func HandleRequest() {
 	// Rotas MetaTag Validator
 	router.POST("/api/validate-meta-tags", controllers.ValidateMetaTagHandler)
 
+	// Rotas Data Interval Calculator
+	router.POST("/api/data-difference", controllers.DataDifference)
+
 	router.Run(":8080")
 }

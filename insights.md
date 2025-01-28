@@ -12,4 +12,4 @@
 - -[x] **Sorteador:** Gera números aleatórios para sorteios ou simulações;
 - -[ ] **Conversor de moedas:** Converte dolar para real, bitcoin...;
 - -[ ] **Gerador de hashes:** Cria hashes para garantir a integridade de dados;
-- -[ ] **PortFinder:** Identificar portas abertas em um domínio;
+- -[ ] **PortFinder:** Identificar portas abertas em um domínio; (criado em uma branch separada)
