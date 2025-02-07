@@ -7,7 +7,7 @@
 - -[ ] **Contador de caracteres:** Dizer quantos caracteres determinado texto possui;
 - -[ ] **Gerador de Lorem Ipsum:** Cria texto fictício para preencher layouts;
 - -[ ] **Gerador de QR Codes:** Cria códigos QR para links de sites;
-- -[ ] **Calculadora de Diferença entre datas:** Retorna os dias entre duas datas;
+- -[x] **Calculadora de Diferença entre datas:** Retorna os dias entre duas datas; (criado em uma branch separada)
 - -[ ] **Cronômetro:** Marca o tempo de tarefas;
 - -[x] **Sorteador:** Gera números aleatórios para sorteios ou simulações;
 - -[ ] **Conversor de moedas:** Converte dolar para real, bitcoin...;
