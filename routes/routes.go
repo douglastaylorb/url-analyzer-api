@@ -32,6 +32,9 @@ func HandleRequest() {
 	// Rotas MetaTag Validator
 	router.POST("/api/validate-meta-tags", controllers.ValidateMetaTagHandler)
 
+	// Rotas Port Finder
+	router.POST("/api/scan-ports", controllers.ScanPortsController)
+
 	// Rotas Data Interval Calculator
 	router.POST("/api/data-difference", controllers.DataDifference)
 
