@@ -15,7 +15,7 @@ func HandleRequest() {
 		AllowOrigins: []string{
 			"http://localhost:5173",
 			"https://net-kit.vercel.app",
-			"https://douglastaylor.com.br",
+			"https://netkit.douglastaylor.com.br",
 		},
 		AllowMethods:     []string{"GET", "POST"},
 		AllowHeaders:     []string{"Origin", "Content-Type"},
