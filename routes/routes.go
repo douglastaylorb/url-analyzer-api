@@ -39,5 +39,8 @@ func HandleRequest() {
 	// Rotas Data Interval Calculator
 	router.POST("/api/data-difference", controllers.DataDifference)
 
+	// Rotas QR Code Generator
+	router.POST("/api/generate-qr", controllers.GenerateQR)
+
 	router.Run(":8080")
 }
