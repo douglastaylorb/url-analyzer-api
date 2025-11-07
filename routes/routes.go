@@ -43,7 +43,7 @@ func HandleRequest() {
 	router.POST("/api/generate-qr", controllers.GenerateQR)
 
 	// Rotas Password Generator
-	router.GET("/api/generate-password", controllers.GeneratePasswordHandler)
+	router.POST("/api/generate-password", controllers.GeneratePasswordHandler)
 
 	router.Run(":8080")
 }
